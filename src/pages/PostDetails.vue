@@ -41,14 +41,15 @@
 
 
 <script>
-import voteComp from "../components/VoteComponent";
+import voteComp from '../components/VoteComponent';
+
 export default {
-  name: "post-details",
+  name: 'post-details',
   data() {
     return { postData: {}, editToggle: false };
   },
   mounted() {
-    this.$store.dispatch("getActivePost", this.$route.params.postId);
+    this.$store.dispatch('getActivePost', this.$route.params.postId);
   },
   computed: {
     post() {
@@ -61,10 +62,10 @@ export default {
       return this.$store.state.profile.email == this.post.creatorEmail;
     },
   },
-  methods: {
+  method: {
     editPost() {
       this.postData.id = this.$route.params.postId;
-      this.$store.dispatch("editPost", this.postData);
+      this.$store.dispatch('editPost', this.postData);
       this.editToggle = false;
     },
   },
@@ -72,6 +73,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
+
 </style>

@@ -15,17 +15,15 @@
 
 <script>
 export default {
-  name: "post-component",
-  props: ["postProp"],
+  name: 'post-component',
+  props: ['postProp'],
   data() {
     return {};
   },
   computed: {},
-  methods: {},
-  components: {},
 };
 </script>
 
-
 <style scoped>
+
 </style>
