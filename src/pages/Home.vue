@@ -32,21 +32,23 @@
   </div>
 </template>
 
+
 <script>
-import postComponent from "../components/PostComponent";
+import postComponent from '../components/PostComponent';
+
 export default {
-  name: "home",
+  name: 'home',
   data() {
     return {
       newPost: {},
     };
   },
   mounted() {
-    this.$store.dispatch("getAllPosts");
+    this.$store.dispatch('getAllPosts');
   },
   methods: {
     createPost() {
-      this.$store.dispatch("createPost", this.newPost);
+      this.$store.dispatch('createPost', this.newPost);
     },
   },
   computed: {
